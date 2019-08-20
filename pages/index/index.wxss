@@ -1,0 +1,43 @@
+button {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.search_box {
+  margin: 20rpx 0 0 0;
+  display: flex;
+  padding: 0 5%;
+  box-sizing: border-box;
+}
+
+.search_box input {
+  width: 70%;
+  height: 46px;
+  border: 1px solid gainsboro;
+}
+
+.search_box button {
+  width: 30%;
+  background-color: #00b2ee;
+  border-radius: 0;
+  color: white;
+}
+
+.tip{
+  text-align: center;
+  padding: 150rpx 0;
+  color: rgb(160, 158, 158);
+}
+
+.rec {
+  margin: 0 5%;
+  padding: 10rpx 0;
+  border-bottom: 1px solid #ccc;
+}
+

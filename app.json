@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/collect/index",
+    "pages/logs/logs",
+    "pages/login/index",
+    "pages/itemMenu/index"    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4682B4",
+    "navigationBarTitleText": "神奇菜谱",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/home2.png",
+        "selectedIconPath": "images/home1.png"
+      },
+      {
+        "pagePath": "pages/collect/index",
+        "text": "收藏",
+        "iconPath": "images/dingdan2.png",
+        "selectedIconPath": "images/dingdan1.png"
+      }
+    ]
+  }
+}

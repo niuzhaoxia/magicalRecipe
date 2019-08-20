@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="search_box">
+    <input bindinput="menuName"></input>
+    <button catchtap="searchMenu">搜索菜谱</button>
+  </view>
+  
+  <view wx:if="{{result.length !== 0}}">
+    <listItem-cpn itemList="{{result}}"></listItem-cpn>
+  </view>
+  <view wx:else class="tip">请在表单中输入您想要搜索的菜谱</view>
+  <text class="rec">为您推荐</text>
+  <view wx:if="{{recommendList.length !== 0}}">
+    <listItem-cpn itemList="{{recommendList}}"></listItem-cpn>
+  </view>
+  <view wx:else class="tip">暂无推荐</view>  
+</view>

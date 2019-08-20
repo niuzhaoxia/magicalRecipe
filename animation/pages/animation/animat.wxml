@@ -1,0 +1,1 @@
+<view class="box" animation="{{animationData}}" catchtap="change"></view>

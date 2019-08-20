@@ -1,0 +1,9 @@
+<view class="info_box">
+  <text class="tags">标签：{{info.tags}}</text>
+  <text>原料：{{info.ingredients}}</text>
+  <view class="step_box" wx:for="{{info.steps}}">
+    <image src="{{item.img}}"></image>
+    <text>{{item.step}}</text>
+  </view>
+</view>
+<view class="addColl" catchtap="addCollect">添加到收藏</view>

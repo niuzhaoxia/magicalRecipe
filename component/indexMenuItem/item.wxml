@@ -1,0 +1,7 @@
+<view class="content">
+  <view class="title_box" wx:for="{{itemList}}" bindtap="menuItem" data-menudata="{{item}}">
+    <image src="{{item}}" wx:for="{{item.albums}}" mode="widthFix"></image>
+    <text class="menu_name">{{item.title}}</text>
+    <text class="menu_intr">{{item.imtro}}</text>
+  </view>
+</view>

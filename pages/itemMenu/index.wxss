@@ -1,0 +1,18 @@
+.info_box > .tags{
+  background-color: #ccc;
+  display: block;
+  margin: 10rpx 10rpx;
+  font-size: 26rpx;
+}
+.step_box image{
+  width: 100%;
+}
+.addColl{
+  width: 100%;
+  background-color: cadetblue;
+  padding: 20rpx 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

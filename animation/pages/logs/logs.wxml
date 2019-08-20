@@ -1,0 +1,68 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view>
+<!--1、项目的配置
+    - pages 这是存放多有的页面的地方
+    - app.js 这是全局的js文件，里边可以放公共的变量
+    - app.json 这是全局的配置文件，他可以tabbar，导航栏的样式
+    - app.wxss 这是全局的样式，还在每一个页面生效
+    - peoject.config.json 他就是项目的配置
+    - sitemmap 这是允许小程序允许被搜索的配置文件-->
+
+<!-- 2、每一个页面的配置
+        - index.js 他就是当前页面的逻辑文件，和当前页面的动态渠道的属性的存放
+        - index.wxss 他就是当前页面的样式文件，他的优先级高于全局的样式配置，（1）他的自适应的单位是rpx，在iphone6下1rpx=0.5px，（所以说做小程序的时候我们拿到的设计稿都是以iphone6；（2）类选择器、标签选择器，子级选择器（.box .name）,并集选择器（.box, .name）
+        为基准的）
+        - index.wxml 他跟html作用差不多，放的是页面展示的数据，和标签，但是写法跟html有差别，原生的标签是不支持的，最常用的标签：view（地位相对于adc）、text（打野）、block（辅助）、swiper、input...（相当于战士） 
+        index.json 他就是当前页面的配置，如果当前页面没有配置，就走全局的配置，如果当前页面配置了，那么就走单签页面的配置项-->
+
+<!-- 3、事件
+        - 冒泡事件，从里往外依次执行 （bind）
+        - 非冒泡 catch
+        - 事件的写法前面必须的有bind或者catch，后面跟事件
+        - 事件类型跟事件之间可以加冒号，也可以不加冒号（bindtap，bind:tap）-->
+
+<!-- 4、路由
+        - navigateTo 保留当前页面，打开一个新页面(当前页面的onHide， 新页面执行onLoad、onShow、onReady)
+        - redirectTo 关闭当前页面，打开一个新页面（当前页面的onUnload执行，新页面执行onLoad、onShow、onReady）
+        - reLaunch 关闭所有页面，打开一个新页面（当前页面的onUnload执行，新页面执行onLoad、onShow、onReady）
+        - navigateBack 返回你级页面，但是前提是之前的页面没有被销毁（）
+        - 路由跳转最多跳转5级(返回之前的页面onUnload执行，返回之后的页面onShow执行)-->
+
+<!-- 5、生命周期
+        - 页面加载肯定执行onLoad、onShow、onReady
+        - 页面卸载onUnload执行
+        - 页面隐藏onHide执行
+        - 页面隐藏之后在显示的话执行onShow-->
+
+<!-- 6、全局json配置
+        - pages 存放所有页面路径的地方，所有的页面必须都得在这里注册
+        - window 他可以导航栏的背景颜色，内容和内容的颜色
+        - tabbar 可以配置底部导航条的配置（路径，文案，颜色。。。）最少得有两个导航，最多五个-->
+
+<!-- 7、组件
+        -使用：在父页面的json文件里以键值对的形式定义一个key和value，key就是你要使用的组件名，value就是组件的路径 
+        - 父传子 在父页面里引用的子组件的标签的行内写(data=""),然后在子组件的properties里接收一下传过去的参数才可以用 
+        - 父传子 在父页面里引用的子组件的标签的行内写(data-set=""),然后在子组件里的this.dataset里直接拿到传过去的值
+        - 子传父 在子组件执行this.triggerEvent('event', 333) ，他的第一个参数是明见名，第二个参数就是你要传的参啊，然后在父页面引用子组件标签的行内写上bindevent="fn",然后fn的e.detail就是你传过来的值-->
+
+
+
+<view class="box" bindtap="jump">
+2222
+</view>
+
+<view>
+<block wx:for="{{[1,2,3,4]}}">
+    <text>{{item}}</text>
+</block>
+<view wx:if="{{flag === 1 ? true : false}}">3579</view>
+</view>
+
+<cpn data= "111" data-set="345" bindevent="fn"></cpn>
+
+
+
